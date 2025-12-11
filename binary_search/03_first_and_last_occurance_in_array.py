@@ -248,6 +248,21 @@ def last_occurance(arr, n, x):
 
 
 
+"""
+###################################
+PROBLEM: COUNT OCCURANCES OF A NUMBER IN SORTED ARRAY WITH DUPLICATES 
+###################################
+
+You have been given a sorted array of intergers 'arr' of size 'n' and an integer 'x'.
+Find the total number of occurances of x in the array.
+
+
+Solution approach:
+    * since the array is sorted
+    * we can use the last problem above like this:
+        * last_occurance - first_occurance + 1
+
+"""
 
 
 
