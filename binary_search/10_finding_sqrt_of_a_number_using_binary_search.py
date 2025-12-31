@@ -127,3 +127,7 @@ def f(n):
             hi = mid - 1
     return ans
 
+print(f(25))
+print(f(26))
+print(f(28))
+print(f(36))
