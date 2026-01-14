@@ -177,7 +177,39 @@ now lo is not <= hi
     * return answer
 
 
-# PSEUDO CODE
+
+
+# PSEUDO CODE WITHOUT OPTIMIZATION
+def f(arr, n):
+    lo, hi = 0, n-1
+    ans = float('inf')
+
+    while lo <= hi:
+        mid = (lo+hi)//2
+
+        # eliminate the left/right half
+        if arr[lo] <= arr[mid]:
+            # this means left half is sorted
+            # update answer with the lowest possible element in the sorted section
+            ans = min(ans, arr[lo])
+
+            # eliminate the left half
+            lo = mid + 1
+        else:
+            # now this means, right half is sorted
+            # update answer with the smallest possible element in the sorted section
+            ans = min(ans, arr[mid])
+
+            # eliminate the right half
+            hi = mid - 1
+
+    return ans
+
+
+
+
+
+# PSEUDO CODE WITH OPTIMIZATION
 def f(arr, n):
     lo, hi = 0, n-1
     ans = float('inf')

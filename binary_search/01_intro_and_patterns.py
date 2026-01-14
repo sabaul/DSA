@@ -1,6 +1,7 @@
 """
+* BINARY SEARCH ON 1-D ARRAY: from 1 - 9
 
-BINARY SEARCH ON ANSWERS: from 10 - 
+* BINARY SEARCH ON ANSWERS: from 10 - 16
 
     * it will be binary search on range
     * we will be asked to find the minimum possible integer or maximum possible integer
@@ -8,5 +9,8 @@ BINARY SEARCH ON ANSWERS: from 10 -
         * AND WE NEED TO FIND MIN/MAX RANGE
             * always binary search
 
+* BINARY SEARCH PATTERN 3: from 17 - 
+    * find min of max -> min(max)
+    * find max of min -> max(min)
 
 """
