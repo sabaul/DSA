@@ -311,3 +311,8 @@ arr = [0, 3, 4, 7, 10, 9]
 cows = 4
 print(bruteforce(arr, cows))
 print(binary_search(arr, cows))
+
+arr = [1, 2, 4, 8, 9]
+cows = 3
+print(bruteforce(arr, cows))
+print(binary_search(arr, cows))
