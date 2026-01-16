@@ -72,7 +72,8 @@ HOW TO SOLVE:
 
 	* do we need to start from 1: NO
 		* if we start from 1, he won't be able to hold the book
-		* to hold one book, someone need at least 24 pages (for this example)
+		* to hold one book, someone need at least books with minimum number of pages:
+				* 24 pages (for this example)
 			* but if we take 24, the max someone is holding is 24 pages book
 			* and they won't be able to hold book with pages 25, 46, 49
 			* so we need to start from max no. of pages book
@@ -301,8 +302,41 @@ def binary_search(arr, m):
 
 
 
+def countStudents(arr, pages):
+	students = 1
+	pagesStudent = 0
+
+	for i in range(len(arr)):
+		if pagesStudent + arr[i] <= pages:
+			pagesStudent += arr[i]
+		else:
+			students += 1
+			pagesStudent = arr[i]
+	return students
+
+def strivers_binarysearch(arr, m):
+	n = len(arr)
+	# impossible case
+	if m > n:
+		return -1
+
+	lo = max(arr)
+	hi = sum(arr)
+
+	while lo <= hi:
+		mid = (lo+hi)//2
+		students = countStudents(arr, mid)
+		if students > m:
+			lo = mid + 1
+		else:
+			hi = mid - 1
+	return lo
+
+
+
 
 arr = [25, 46, 28, 49, 24]
 students = 4
-print(bruteforce(arr, students))
-print(binary_search(arr, students))
+print(f"brute force: {bruteforce(arr, students)}")
+print(f"binary search: {binary_search(arr, students)}")
+print(f"striver's binary search: {strivers_binarysearch(arr, students)}")
