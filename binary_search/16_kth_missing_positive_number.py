@@ -236,6 +236,7 @@ so increment arr[hi] 2 times, we get 9, that is the answer
 
 Formula for missing numbers:
 	arr[hi] - (hi+1)
+	arr[idx] - (idx+1)
 
 How many more do we need:
 	= arr[hi] + more
